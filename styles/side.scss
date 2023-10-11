@@ -1,0 +1,77 @@
+$primary-color: #3498db;
+$secondary-color: #2ecc71;
+$error-color: #e74c3c;
+$text-color: #333;
+$light-grey: #f7f7f7;
+$new-background: rgb(242, 199, 68);
+
+// General body styling
+body {
+  font-family: "Arial", sans-serif;
+  background-color: $new-background;
+  color: $text-color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  margin: 0;
+  padding: 10px;
+}
+// Common box styles
+@mixin box-styles {
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  margin-bottom: 15px;
+  transition: all 0.3s ease-in-out;
+  &:hover {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    transform: scale(1.03);
+  }
+}
+#welcome-screen,
+#game-rules {
+  text-align: center;
+  @include box-styles;
+}
+input[type="text"] {
+  width: calc(100% - 20px);
+  max-width: 300px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid lighten($text-color, 40%);
+  border-radius: 5px;
+  box-sizing: border-box;
+  &:focus {
+    outline: none;
+    border-color: $primary-color;
+    box-shadow: 0 0 8px rgba($primary-color, 0.6);
+  }
+}
+a#startGame {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 1em;
+  cursor: pointer;
+  background-color: $secondary-color;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+  margin-top: 20px; // if you need space between the input and the button
+  &:hover {
+    background-color: darken($secondary-color, 10%);
+    transform: translateY(-3px) scale(1.1); // combined with scale for a "pop" effect
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
+  &:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  }
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 8px rgba($secondary-color, 0.6);
+  }
+}

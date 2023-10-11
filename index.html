@@ -3,17 +3,39 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Simple Quiz</title>
-    <link rel="stylesheet" href="main.css" />
+    <title>Who Wants to Be a Quizillionaire!</title>
+    <link rel="stylesheet" href="../styles/main.css" />
+    <script src="/scripts/main.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <script src="main.js" defer></script>
   </head>
   <body>
-    <div id="quiz-container">
-      <p id="question">What is the capital of France?</p>
-      <input id="answer" type="text" placeholder="Type your answer here" />
-      <button id="submit-btn">Submit</button>
-      <p id="result"></p>
+    <div class="quiz-app">
+      <!-- Quiz Info Section -->
+      <div class="quiz-app__info">
+        <div class="quiz-app__category">Quiz Category: General Knowledge</div>
+      </div>
+
+      <div class="quiz-app__area">
+        <h2 class="quiz-app__question"></h2>
+
+        <div class="quiz-app__options"></div>
+
+        <button class="quiz-app__submit"></button>
+      </div>
+
+      <div class="quiz-app__bullets">
+        <div class="quiz-app__spans">
+          <span class="quiz-app__bullet quiz-app__bullet--on"></span>
+          <span class="quiz-app__bullet"></span>
+          <span class="quiz-app__bullet"></span>
+          <span class="quiz-app__bullet"></span>
+          <span class="quiz-app__bullet"></span>
+        </div>
+      </div>
     </div>
+
+    <!-- <div class="quiz-app__results">
+      Your Score: <span class="quiz-app__score">10</span>/10
+    </div> -->
   </body>
 </html>

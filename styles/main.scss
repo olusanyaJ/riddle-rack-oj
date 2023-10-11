@@ -1,0 +1,108 @@
+body {
+  background: #eeeeee;
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+}
+.quiz-app {
+  background-color: rgb(242, 199, 68);
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  &__options button {
+    font-size: 16px;
+    font-weight: 200;
+    letter-spacing: 1px;
+    padding: 13px 20px;
+    outline: 0;
+    border: 1px solid black;
+    cursor: pointer;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    &:after {
+      content: "";
+      background-color: #ffe54c;
+      width: 100%;
+      z-index: -1;
+      position: absolute;
+      height: 100%;
+      top: 7px;
+      left: 7px;
+      transition: 0.2s;
+    }
+    &:hover:after {
+      top: 0px;
+      left: 0px;
+    }
+  }
+  &__info {
+    text-align: center;
+    &__category {
+      background: #405ca1;
+      color: #fff;
+      font-size: 24px;
+      padding: 10px;
+      border-radius: 15px;
+      margin-bottom: 10px;
+    }
+    &__count {
+      font-size: 18px;
+      color: #5a6772;
+    }
+  }
+  &__area {
+    margin-top: 20px;
+  }
+  &__question {
+    font-size: 30px;
+    color: #2b2b2b;
+    margin-bottom: 20px;
+  }
+  &__options {
+    display: flex;
+    flex-direction: column;
+  }
+  &__submit {
+    background: #405ca1;
+    color: #fff;
+    font-size: 20px;
+    border: none;
+    border-radius: 15px;
+    margin-top: 20px;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  &__bullets {
+    text-align: center;
+    margin-top: 20px;
+    &__spans {
+      display: flex;
+      justify-content: center;
+      &__bullet {
+        width: 15px;
+        height: 15px;
+        background: #cbcbcb;
+        border-radius: 50%;
+        margin: 0 5px;
+        &--on {
+          background: #2d85a4;
+        }
+      }
+    }
+  }
+  &__results {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 24px;
+    color: #2b2b2b;
+  }
+  &__score {
+    font-weight: bold;
+    color: #405ca1;
+  }
+}

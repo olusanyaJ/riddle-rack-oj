@@ -1,0 +1,110 @@
+body {
+  background: #eeeeee;
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.quiz-app {
+  background-color: rgb(242, 199, 68);
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+}
+.quiz-app__options button {
+  font-size: 16px;
+  font-weight: 200;
+  letter-spacing: 1px;
+  padding: 13px 20px;
+  outline: 0;
+  border: 1px solid black;
+  cursor: pointer;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0);
+  -moz-user-select: none;
+       user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+.quiz-app__options button:after {
+  content: "";
+  background-color: #ffe54c;
+  width: 100%;
+  z-index: -1;
+  position: absolute;
+  height: 100%;
+  top: 7px;
+  left: 7px;
+  transition: 0.2s;
+}
+.quiz-app__options button:hover:after {
+  top: 0px;
+  left: 0px;
+}
+.quiz-app__info {
+  text-align: center;
+}
+.quiz-app__info__category {
+  background: #405ca1;
+  color: #fff;
+  font-size: 24px;
+  padding: 10px;
+  border-radius: 15px;
+  margin-bottom: 10px;
+}
+.quiz-app__info__count {
+  font-size: 18px;
+  color: #5a6772;
+}
+.quiz-app__area {
+  margin-top: 20px;
+}
+.quiz-app__question {
+  font-size: 30px;
+  color: #2b2b2b;
+  margin-bottom: 20px;
+}
+.quiz-app__options {
+  display: flex;
+  flex-direction: column;
+}
+.quiz-app__submit {
+  background: #405ca1;
+  color: #fff;
+  font-size: 20px;
+  border: none;
+  border-radius: 15px;
+  margin-top: 20px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+.quiz-app__bullets {
+  text-align: center;
+  margin-top: 20px;
+}
+.quiz-app__bullets__spans {
+  display: flex;
+  justify-content: center;
+}
+.quiz-app__bullets__spans__bullet {
+  width: 15px;
+  height: 15px;
+  background: #cbcbcb;
+  border-radius: 50%;
+  margin: 0 5px;
+}
+.quiz-app__bullets__spans__bullet--on {
+  background: #2d85a4;
+}
+.quiz-app__results {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 24px;
+  color: #2b2b2b;
+}
+.quiz-app__score {
+  font-weight: bold;
+  color: #405ca1;
+}/*# sourceMappingURL=main.css.map */
